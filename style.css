@@ -1,0 +1,327 @@
+body {
+	background: #849d8f;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+	border-bottom: 1px solid #a9bbb1;
+}
+
+a:hover, a:active {
+	color: #ffbc9e;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+a.logo {
+	border: none;
+}
+
+/* .col-md-3, .col-md-5, .col-md-4 {
+	outline: 1px solid red;
+} */
+
+.main-header {
+	min-height: 75px;
+	padding-top: 10px;
+}
+
+.main-nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+.main-nav > li {
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding-bottom: 5px;
+}
+
+.main-nav > li > a {
+	display: block;
+	margin: 6px 15px;
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.main-nav > li:hover > a {
+	background: #f7f6f3;
+	color: #000;
+	margin: 0;
+	padding: 6px 15px;
+	font-weight: 700;
+	border-radius: 15px;
+	border-bottom: none;
+}
+
+.main-nav li:hover .sub-nav {
+	display: block;
+}
+
+/* SUB MENU START */
+.sub-nav {
+	position: absolute;
+	top: 35px;
+	right: 0;
+	background: #fff;
+	padding: 0;
+	margin: 0;
+	min-width: 145px;
+	border-radius: 5px;
+	list-style-type: none;
+	text-align: left;
+	display: none;
+	padding: 10px 0;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.sub-nav li {
+	padding: 0 20px;
+	transition: 0.8s background;
+}
+
+.sub-nav li a {
+	color: #323232;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	display: block;
+	padding: 5px 0;
+	border: none;
+}
+
+.sub-nav li:hover {
+	background: #fbded7;
+}
+
+.sub-nav li:active {
+	background: #f6b5a5;
+}
+
+.sub-nav li.active {
+	background: #d07058;
+}
+
+.sub-nav .sub-title:hover, 
+.sub-nav .sub-title:active {
+	background: transparent;
+}
+
+.sub-nav .sub-title {
+	margin: 0 7px 5px 7px;
+	padding: 0 15px 5px 15px;
+	border-bottom: 1px solid #d7d7d7;
+}
+
+.sub-nav .sub-title span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+}
+/* SUB MENU END */
+
+
+
+.main-header__userblock a:hover {
+	color: #000;
+	background: #fff;
+}
+
+.main-header__search, 
+.main-header__login,
+.main-header__cart {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.main-header__userblock .header-button {
+	background: rgba(255, 255, 255, 0.2);
+	outline: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.main-header__search .header-button--search {
+	background: rgba(255, 255, 255, 0.2) url("../img/header-buttons.png") no-repeat;
+	background-position: 2px -115px;
+	font-size: 0;
+	outline: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.main-header__search:hover .header-button--search {
+	background: rgba(255, 255, 255, 1.0) url("../img/header-buttons.png") no-repeat;
+	background-position: 2px -142px;
+}
+
+
+/* LOGIN AND SEARCH BLOCK*/
+.main-header__search .search-block,
+.main-header__login .login-block {
+	background: #f8f7f4;
+	width: 340px;
+	position: absolute;
+	right: 0;
+	top: 38px;
+	padding: 20px 15px;
+	border-radius: 5px;
+	z-index: 1000;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+.main-header__login .login-block {
+	width: 280px;
+	right: 0;
+	top: 32px;
+}
+
+.main-header__search:hover .search-block,
+.main-header__login:hover .login-block {
+	display: block;
+}
+
+.main-header__search .search-input,
+.main-header__login .login-input {
+	width: 100%;
+	padding: 0 15px;
+	font-size: 14px;
+	line-height: 44px;
+	border: 1px solid #d3d3d2;
+	border-radius: 5px;
+}
+
+.main-header__login .login-input {
+	margin-bottom: 20px;
+}
+
+.main-header__search .login-block {
+	left: -307px;
+	top: 37px;
+}
+
+.main-header__login .login-block a{
+	color: #000;
+	text-decoration: underline;
+}
+
+.main-header__login .login-block a:hover{
+	color: #000;
+	background: #fff;
+}
+
+.main-header__login .login-block__links {
+	width: 125px;
+	text-align: left;
+	float: right;
+}
+
+.main-header__login .login-block__links a{
+	font-size: 13px;
+	line-height: 24px;
+}
+/* LOGIN AND SEARCH BLOCK END*/
+
+
+
+.main-header__userblock .header-button--login:before,
+.main-header__userblock .header-button--cart:before {
+	content: "";
+	background: url("../img/header-buttons.png") no-repeat;
+	position: absolute;
+	left: 5px;
+	top: 0;
+	width: 32px;
+	height: 32px;
+}
+
+.main-header__userblock .header-button--login {
+	padding: 6px 15px 6px 45px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.main-header__userblock .header-button--login:before {
+	background-position: 2px -58px;
+}
+
+.main-header__userblock .header-button--login:hover:before {
+	background-position: 2px -87px;
+}
+
+
+.main-header__cart {
+	margin-right: 0;
+}
+
+.main-header__userblock .header-button--cart {
+	padding: 6px 35px 6px 45px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.main-header__userblock .header-button--cart:before {
+	background-position: 2px 0;
+}
+
+.main-header__userblock .header-button--cart:hover:before {
+	background-position: 2px -30px;
+}
+
+.main-header__time {
+	text-align: right;
+}
+
+.main-header__time p {
+	font-size: 14px;
+	line-height: 16px;
+	padding: 0;
+	margin: 5px 0;
+}
+
+.main-header__time p + p {
+	font-size: 22px;
+	line-height: 24px;
+}
+
+
+.button {
+	background: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+	padding: 10px 25px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+	text-align: center;
+	box-shadow: 0px 1px 2px rgb(172, 16, 0);
+}

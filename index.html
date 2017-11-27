@@ -6,10 +6,78 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+  	<header class="main-header">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-3 d-flex align-items-center">
+  					<div class="main-header__logo">
+  						<a href="#" class="logo"><img src="img/Gllacy-logo.png" alt="Glaccy Shop"></a>
+  					</div>
+  				</div>
+  				<div class="col-md-5 d-flex align-items-center">
+  					<nav class="main-header__nav">
+  						<ul class="main-nav">
+  							<li><a href="#">Каталог</a>
+								<ul class="sub-nav">
+									<li class="sub-title"><span>Новинки</span></li>
+									<li><a href="#">Сливочное</a></li>
+									<li><a href="#">Щербеты</a></li><!-- li class="active" для активной старницы-->
+									<li><a href="#">Фруктовый сад</a></li>	
+									<li><a href="#">Мелорин</a></li>
+								</ul>
+  							</li>
+  							<li><a href="#">Доставка и оплата</a></li>
+  							<li><a href="#">О Компании</a></li>
+  						</ul>
+  					</nav>
+  				</div>
+  				<div class="col-md-4 d-flex align-items-center justify-content-end">
+  					<div class="main-header__userblock">
+  						<div class="main-header__search">
+  							<button class="header-button header-button--search" type="button">Поиск</button>
+  							<div class="search-block">
+	  							<form action="#" method="get">
+	  								<input type="search" name="search" placeholder="Что ищем?" class="search-input">
+	  							</form>
+  							</div>
+  						</div>
+  						<div class="main-header__login">
+  							<a href="#" class="header-button header-button--login">Вход</a>
+  							<div class="login-block">
+  								<form action="#" method="post">
+	  								<input type="email" name="login" placeholder="Электронная почта" class="login-input">
+	  								<input type="password" name="password" placeholder="Пароль" class="login-input">
+	  								<button type="submit" class="button">Войти</button>
+	  								<div class="login-block__links">
+		  								<a href="#">Забыли пароль?</a>
+		  								<a href="#">Новая регистрация</a>
+	  								</div>
+	  							</form>
+  							</div>
+  						</div>
+  						<div class="main-header__cart">
+  							<a href="#" class="header-button header-button--cart">Пусто</a>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-4 offset-md-8">
+  					<div class="main-header__time">
+  						<p>С 10 до 20, ежедневно</p>
+  						<p>8 812 450-25-25</p>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</header>
 	
-	
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
