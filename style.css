@@ -1,6 +1,6 @@
 body {
-	background: #849d8f;
-	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	background: #8ba596 url('img/ice-cream-1.png') no-repeat 50% 0;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.4;
@@ -11,7 +11,7 @@ a {
 	color: #fff;
 	font-size: 16px;
 	line-height: 1.4;
-	border-bottom: 1px solid #a9bbb1;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 a:hover, a:active {
@@ -25,7 +25,7 @@ a.logo {
 }
 
 .button {
-	background: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+	background: linear-gradient(90deg, #e74b36 0%, #f26843 100%);
 	padding: 10px 25px;
 	color: #fff;
 	font-size: 18px;
@@ -34,14 +34,22 @@ a.logo {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 	text-align: center;
-	box-shadow: 0px 1px 2px rgb(172, 16, 0);
+	text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.8);
+	box-shadow: 0px 2px 2px 0px rgb(172, 16, 0);
 }
 
-/* .col-md-3, .col-md-5, .col-md-4 {
-	outline: 1px solid red;
-} */
+.button:hover {
+	background: linear-gradient(90deg, #ec6f5e 0%, #f58669 100%);
+	box-shadow: 0px 2px 2px 0px #a23324;
+	color: #fff;
+}
+
+.button:active {
+	background: linear-gradient( 90deg, #e1613e 0%, #d74632 100%);
+	box-shadow: inset 0px 2px 2px 0px rgb(148, 39, 24);
+	color: #fff;
+}
 
 .main-header {
 	min-height: 75px;
@@ -76,15 +84,18 @@ a.logo {
 .main-nav > li:hover > a {
 	background: #f7f6f3;
 	color: #000;
+	font-size: 16px;
 	margin: 0;
 	padding: 6px 15px;
-	font-weight: 700;
 	border-radius: 15px;
 	border-bottom: none;
+	margin-top: -2px;
 }
 
 .main-nav li:hover .sub-nav {
-	display: block;
+	opacity: 1;
+ 	visibility: visible;
+  	transition-delay: 0s;
 }
 
 /* SUB MENU START */
@@ -99,9 +110,12 @@ a.logo {
 	border-radius: 5px;
 	list-style-type: none;
 	text-align: left;
-	display: none;
 	padding: 10px 0;
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	z-index: 1000;
+	opacity: 0;
+  	visibility: hidden;
+  	transition: opacity 0.5s, visibility 0s linear 0.5s;
 }
 
 .sub-nav li {
@@ -150,12 +164,6 @@ a.logo {
 /* SUB MENU END */
 
 
-
-.main-header__userblock a:hover {
-	color: #000;
-	background: #fff;
-}
-
 .main-header__search, 
 .main-header__login,
 .main-header__cart {
@@ -198,7 +206,8 @@ a.logo {
 
 /* LOGIN AND SEARCH BLOCK*/
 .main-header__search .search-block,
-.main-header__login .login-block {
+.main-header__login .login-block,
+.main-header__cart .cart-block {
 	background: #f8f7f4;
 	width: 340px;
 	position: absolute;
@@ -208,7 +217,9 @@ a.logo {
 	border-radius: 5px;
 	z-index: 1000;
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	display: none;
+	opacity: 0;
+  	visibility: hidden;
+  	transition: opacity 0.5s, visibility 0s linear 0.5s;
 }
 
 .main-header__login .login-block {
@@ -218,8 +229,12 @@ a.logo {
 }
 
 .main-header__search:hover .search-block,
-.main-header__login:hover .login-block {
+.main-header__login:hover .login-block,
+.main-header__cart:hover .cart-block {
 	display: block;
+	opacity: 1;
+  	visibility: visible;
+  	transition-delay: 0s;
 }
 
 .main-header__search .search-input,
@@ -266,7 +281,6 @@ a.logo {
 /* LOGIN AND SEARCH BLOCK END*/
 
 
-
 .main-header__userblock .header-button--login:before,
 .main-header__userblock .header-button--cart:before {
 	content: "";
@@ -292,6 +306,10 @@ a.logo {
 	background-position: 2px -87px;
 }
 
+.header-button--login:hover,
+.header-button--cart:hover{
+	color: #000;
+}
 
 .main-header__cart {
 	margin-right: 0;
@@ -311,6 +329,76 @@ a.logo {
 	background-position: 2px -30px;
 }
 
+
+.main-header__cart .cart-block {
+	color: #323232;
+	font-size: 13px;
+	width: 540px;
+	right: 0;
+	top: 32px;
+	padding: 10px;
+}
+
+.cart-block__table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cacac7;
+}
+
+.cart-block__del {
+	border: none;
+	font-size: 0;
+	outline: none;
+	background: transparent;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;	
+	cursor: pointer;
+}
+
+.cart-block__del:before, .cart-block__del:after {
+	position: absolute;
+	bottom: 0;
+	left: 7px;
+	content: "";
+	width: 1px;
+	height: 13px;
+	background: #000;
+	transform: rotate(45deg);
+}
+
+.cart-block__del:after {
+	transform: rotate(-45deg);
+}
+
+.cart-block__img {
+	width: 33px;
+	height: 33px;
+	overflow: hidden;
+}
+
+.cart-block__xprice {
+	color: #999999;
+}
+
+.cart-block__price {
+	font-size: 15px;
+	color: #000;
+	font-weight: bold;
+	text-align: right;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.cart-block__buy {
+	text-align: right;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
 .main-header__time {
 	text-align: right;
 }
@@ -327,3 +415,81 @@ a.logo {
 	line-height: 24px;
 }
 
+
+.js-color {
+	background: #000;
+}
+
+
+
+
+
+
+
+.main-slider__slides {
+	position: relative;
+	z-index: 900;
+	top: -130px;
+}
+
+
+
+
+/* .main-slider {
+	position: relative;
+	width: 100%;
+
+}
+
+.main-slider input[type=radio] {
+    display: none;
+}
+
+.slider-inner {
+	width: 647px;
+	height: 584px;
+    overflow: hidden;
+}
+
+.slider-slides{
+    width: 300%;
+    transition: transform .8s ease;
+}
+
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    z-index: 100;
+    text-align: center;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background: #ccc;
+    cursor: pointer;   
+    border: 4px solid white;
+    border-radius: 50%;    
+    box-shadow: 0px 0px 2px rgba(0,0,0,.8);     
+    transition: background-color .2s;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] { 
+    background-color: #666;
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides { 
+    transform: translate(0);
+}
+#btn-2:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-652px);
+}
+#btn-3:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-1300px);
+} */
