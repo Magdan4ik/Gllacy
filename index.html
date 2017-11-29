@@ -22,7 +22,7 @@
   				<div class="col-md-6 d-flex align-items-center">
   					<nav class="main-header__nav">
   						<ul class="main-nav">
-  							<li><a href="#">Каталог</a>
+  							<li><a href="#">Каталог</a>       <!-- li class="active" для активной старницы-->
 								<ul class="sub-nav">
 									<li class="sub-title"><span>Новинки</span></li>
 									<li><a href="#">Сливочное</a></li>
@@ -100,6 +100,7 @@
   			</div>
   		</div>
   	</header>
+    
   	<section class="main-slider">
   		<div class="container">
   			<div class="row">
@@ -131,6 +132,7 @@
   			</div>
   		</div>
   	</section>
+
   	<section class="main-sale">
   		<div class="container">
   			<div class="row">
@@ -151,6 +153,7 @@
   			</div>
   		</div>
   	</section>
+
   	<section class="main-goods">
   		<div class="container">
   			<div class="row">
@@ -201,45 +204,123 @@
   			</div>
   		</div>
   	</section>
+
   	<section class="advantages">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-md-12 advantages__item">
-					<h3 class="advantages__title">Магазин Глейси — это онлайн и офлайн магазин по продаже <br>мороженого собственного производства на развес</h3>
-					<div class="row">
-						<div class="col-md-6">
-  							<div class="advantages__desription i-cream">
-  								Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-  							</div>
-  						</div>
-						<div class="col-md-6">
-	  						<div class="advantages__desription cow">
-	  							Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-	  						</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-  							<div class="advantages__desription leaf">
-  								Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-  							</div>
-  						</div>
-						<div class="col-md-6">
-	  						<div class="advantages__desription therm">
-	  							Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-	  						</div>
-						</div>
-					</div>
-  				</div>
-  			</div>
-  		</div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="advantages__item">
+              <h3 class="advantages__title">Магазин Глейси — это онлайн и офлайн магазин по продаже <br>мороженого собственного производства на развес</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="advantages__desription i-cream">
+                      Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="advantages__desription cow">
+                      Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="advantages__desription leaf">
+                      Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="advantages__desription therm">
+                      Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   	</section>
 
-	
+    <section class="main-blog">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="main-blog__item strawberry">
+              <h5>Новое в нашем блоге</h5>
+              <a href="#" class="main-blog__name">10  способов сервировки фруктовых щербетов к столу</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="main-blog__item mail-b">
+              <div class="main-blog__mail-box"> 
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+                <form action="#" method="post" class="mail-box__form">
+                  <input type="email" class="mail-box__input" name="email" placeholder="Электронная почта">
+                  <button type="submit" class="button">Отправить</button>
+                </form>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="main-map">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="google-map"></div>
+            <div class="main-map__contact">
+              <address class="main-map__adress">
+                <p>Адрес главного офиса <br> и офлайн магазина:</p>
+                <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+              </address>
+              <div class="main-map__tel">
+                <p>Для заказов по телефону:</p>
+                <b>8 812 450-25-25</b>
+                <p>(с 10 до 20 ежедневно)</p>
+              </div>
+              <a href="#" class="button">Форма обратной связи</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-md-3">
+            <ul class="main-footer__social">
+               <li><a href="#" class="social-button social-button--tw">Twitter</a></li>
+               <li><a href="#" class="social-button social-button--in">Insta</a></li>
+               <li><a href="#" class="social-button social-button--fb">Facebook</a></li>
+               <li><a href="#" class="social-button social-button--vk">Vk</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="main-footer__about">
+               <li class="provider"><a href="#">Для поставщиков</a></li>
+               <li><a href="#">О производстве</a></li>
+               <li><a href="#">Наши документы</a></li>
+               <li><a href="#">Экологические стандарты</a></li>
+            </ul>              
+          </div>
+          <div class="col-md-3">
+            <div class="main-footer__copyright">
+              <img src="img/Gllacy-logo.png" alt="Gllacy" class="main-footer__img">
+              <p>Верстка by Magdan4ik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvaYaMAFdc_PdnJes5xUo7bSfcx6PspxU&callback=initMap"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/myscripts.js"></script>
   </body>
 </html>
