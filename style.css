@@ -1099,6 +1099,7 @@ select[name="sorting"]:hover {
     outline: none;
     border: 2px solid #fff;
     cursor: pointer;
+    transition: 0.3s background;
 }
 
 .filter-button:hover {
@@ -1111,4 +1112,67 @@ select[name="sorting"]:hover {
 	border: none;
 	padding: 2px 17px;
 	box-shadow: inset 0px 2px 1px 0px #696969;
+}
+
+
+
+
+.catalog-pagination {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 0;
+}
+
+.catalog-pagination li {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 3px;
+}
+
+.catalog-pagination li a {
+	color: #fff;
+	width: 27px;
+	height: 27px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;	
+	line-height: 27px;
+	text-decoration: none;
+	border: none;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.catalog-pagination li a:hover {
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.catalog-pagination li a:active,
+.catalog-pagination .p-active a {
+	background: #fff;
+	color: #000;
+}
+
+
+.catalog-pagination li:first-child a, 
+.catalog-pagination li:last-child a {
+	font-size: 0;
+	background: url('img/paginator.svg') no-repeat 50% 50%;
+	opacity: 0.4;
+}
+
+.catalog-pagination li:first-child a {
+	transform: rotate(180deg);
+}
+
+.catalog-pagination li:first-child a:hover, 
+.catalog-pagination li:last-child a:hover,
+.catalog-pagination li:first-child a:active, 
+.catalog-pagination li:last-child a:active {
+	background-color: transparent;
+}
+
+.catalog-pagination .p-active a {
+	opacity: 1 !important;
 }
