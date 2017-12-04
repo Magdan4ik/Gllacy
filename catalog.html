@@ -16,7 +16,7 @@
   			<div class="row">
   				<div class="col-md-2 d-flex align-items-center">
   					<div class="main-header__logo">
-  						<a href="#" class="logo"><img src="img/Gllacy-logo.png" alt="Glaccy Shop"></a>
+  						<a href="index.html" class="logo"><img src="img/Gllacy-logo.png" alt="Glaccy Shop"></a>
   					</div>
   				</div>
   				<div class="col-md-6 d-flex align-items-center">
@@ -84,7 +84,7 @@
   								<div class="cart-block__price">Итого: 750 руб.</div>
   								<div class="cart-block__buy">
   									<a href="#" class="button">В корзину</a>
-  								</div> <!-- header-button--cart--have если есть товар -->
+  								</div>
   							</div>
   						</div>
   					</div>
@@ -111,7 +111,79 @@
   				</ul>
   			</div>
   		</div>
+	  	<div class="row">
+			<div class="col-md-12">
+				<h1 class="main-title">Сливочное мороженое</h1>
+			</div>
+		</div>
   	</div>
+  	<form action="#" method="get" class="sorting-form">
+	  	<div class="container">
+	  		<div class="row mb-4">
+	  			<div class="col-md-3">
+	  				<fieldset>
+	  					<legend>Сортировка:</legend>
+	  					<div class="select-wrap">
+		  					<select name="sorting" class="bg-filters">
+				              <option value="popul">по популярности</option>
+				              <option value="cheap">сначала недорогие</option>
+				              <option value="expensive">сначала дорогие</option>
+				              <option value="fat">по жирности</option>
+				            </select>
+			            </div>
+	  				</fieldset>
+	  			</div>
+	  			<div class="col-md-3">
+	  				<fieldset>
+	  					<legend>Цена: 100 руб. - 500 руб.</legend>
+							<div class="bg-filters bg-filters--price">
+								<div class="range-line"></div>
+								<div class="range-btn range-btn--l"></div>
+								<div class="range-btn range-btn--r"></div>
+							</div>
+	  				</fieldset>				
+	  			</div>
+	  			<div class="col-md-6">
+	  				<fieldset>
+	  					<legend>Жирность:</legend>
+							<div class="bg-filters fat">
+								<input type="radio" id="fat-0" name="fat" value="0">
+								<label for="fat-0">0%</label>
+								<input type="radio" id="fat-10" name="fat" value="-10">
+								<label for="fat-10">до 10%</label>
+								<input type="radio" id="fat-30" name="fat" value="-30">
+								<label for="fat-30">до 30%</label>
+								<input type="radio" id="fat+30" name="fat" value="+30">
+								<label for="fat+30">выше 30%</label>
+							</div>
+	  				</fieldset>		  				
+	  			</div>
+	  		</div>
+	  		<div class="row">
+	  			<div class="col-md-10">
+	  				<fieldset>
+	  					<legend>Наполнители:</legend>
+							<div class="bg-filters fillers">
+								<input type="checkbox" id="chocolate" name="chocolate" value="chocolate">
+								<label for="chocolate">шоколадные</label>
+								<input type="checkbox" id="sugar" name="sugar" value="sugar">
+								<label for="sugar">сахарные присыпки</label>
+								<input type="checkbox" id="fruits" name="fruits" value="fruits">
+								<label for="fruits">фрукты</label>
+								<input type="checkbox" id="sirup" name="sirup" value="sirup">
+								<label for="sirup">сиропы</label>
+								<input type="checkbox" id="jam" name="jam" value="jam">
+								<label for="jam">джемы</label>
+							</div>
+	  				</fieldset>			  				
+	  			</div>
+	  			<div class="col-md-2 d-flex align-items-end">
+	  				<button type="submit" class="filter-button">Применить</button>
+	  			</div>
+	  		</div>
+	  	</div>
+  	</form>
+
 
 
   	<main class="main-goods">
