@@ -38,6 +38,25 @@ input {
 	border-radius: 5px;
 }
 
+select {
+	cursor: pointer;
+}
+
+legend {
+	font-size: 14px;
+	line-height: 16px;
+	padding-left: 20px;
+	margin-bottom: 5px;
+}
+
+option {
+	color: #000;
+}
+
+label {
+	margin-bottom: 0;
+}
+
 .button {
 	background: linear-gradient(90deg, #e74a35 0%, #f26843 100%);
 	display: inline-block;
@@ -357,7 +376,7 @@ input {
 
 .main-header__userblock .header-button--cart,
 .main-header__userblock .header-button--cart--have {
-	padding: 6px 35px 6px 45px;
+	padding: 6px 15px 6px 45px;
 	border-radius: 20px;
 	position: relative;
 }
@@ -878,6 +897,7 @@ input {
   	font-size: 13px;
   	line-height: 18px;
   	font-weight: 300;
+  	margin-left: 25px;
 }
 
 .main-footer__about .provider {
@@ -888,11 +908,12 @@ input {
 .main-footer__about .provider:before {
 	content: "";
 	background-image: url('img/heart.svg');
-	position: absolute;
-	left: -5px;
-	top: 6px;
 	width: 15px;
 	height: 13px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: -25px;
+	margin-right: 10px;
 }
 
 .main-footer__img {
@@ -913,7 +934,7 @@ input {
 	margin: 0;
 	padding: 0;
 	font-size: 0;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .breadcrumbs li {
@@ -940,3 +961,152 @@ input {
 		padding: 0;
 }
 
+.main-title {
+	font-size: 35px;
+	line-height: 41px;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.sorting-form {
+	margin-bottom: 35px;
+}
+
+.bg-filters{
+    position: relative;
+	background: rgba(255, 255, 255, 0.4);
+    min-height: 34px;
+    margin: 0;
+    padding: 6px 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.select-wrap {
+	width: 200px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+select[name="sorting"] {
+	background-image: url("img/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: 80% 55%;
+	padding-right: 45px;
+	transition: 0.3s all;
+}
+
+select[name="sorting"]:hover {
+	background-color: #fff;
+	background-image: url("img/arrow-hover.svg");
+	color: #000;
+
+}
+
+.bg-filters--price:before {
+	content: "";
+	background: rgba(255, 255, 255, 0.4);
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	width: calc(100% - 30px);
+	height: 4px;
+	cursor: pointer;
+}
+
+.range-btn {	
+  	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+ 	vertical-align: top;
+ 	border-radius: 50%;
+ 	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+ 	cursor: pointer;
+}
+
+.range-btn--l,
+.range-line {
+	margin-left: 10%;
+}
+
+.range-btn--r {
+	margin-right: 30%;
+	float: right;
+}
+
+.range-line {
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+	width: calc(60% - 30px);   /*   [100%] - [margin .range-btn--l] - [margin .range-btn--r] = 60%    */
+	height: 4px;
+	cursor: pointer;
+}
+
+
+.fat input[type="radio"],
+.fillers input[type="checkbox"] {
+	display: none;
+}
+
+.fat label,
+.fillers label {
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.fat label:before,
+.fillers label:before {
+	content: "";
+	background: transparent;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 21px;
+	height: 21px;
+	margin-right: 10px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+.fat input:checked + label:before {
+	background: #fff;
+}
+
+.fillers label:before {
+	border-radius: 4px;
+}
+
+.fillers input:checked + label:before {
+	background: url('img/checkbox-checked.svg') no-repeat -1px -1px;
+}
+
+.filter-button {
+	background: rgba(255, 255, 255, 0.4);
+    margin: 0;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+	background: #f7f6f3;
+	color: #000;
+}
+
+.filter-button:active{b
+	border: none;
+	background: #ededed;
+	box-shadow: inset 0px 2px 1px 0px #696969;
+}
