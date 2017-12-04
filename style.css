@@ -36,6 +36,7 @@ input {
 	color: #999;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
+	min-height: 44px;
 }
 
 select {
@@ -1105,8 +1106,9 @@ select[name="sorting"]:hover {
 	color: #000;
 }
 
-.filter-button:active{b
-	border: none;
+.filter-button:active{
 	background: #ededed;
+	border: none;
+	padding: 2px 17px;
 	box-shadow: inset 0px 2px 1px 0px #696969;
 }
