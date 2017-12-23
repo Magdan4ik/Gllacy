@@ -27,6 +27,16 @@ body {
 	background-image: url('img/ice-cream-3.png');
 }
 
+body::after{
+    position: absolute; 
+    width:0; 
+    height:0; 
+    overflow: hidden; 
+    z-index:-1; 
+    content: url('img/ice-cream-2.png') 
+    		 url('img/ice-cream-3.png');
+}
+
 a {
 	color: #fff;
 	font-size: 16px;
