@@ -1,10 +1,30 @@
 body {
-	background: #8ba596 url('img/ice-cream-1.png') no-repeat 50% 0;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.4;
 	color: #fff;
+	transition: 0.5s background;
+}
+
+.bg-1, .bg-2, .bg-3 {
+	background-repeat: no-repeat;
+	background-position:  50% 0;
+}
+
+.bg-1 {
+	background-color: #8ba596;
+	background-image: url('img/ice-cream-1.png');
+}
+
+.bg-2 {
+	background-color: #94a2b2;
+	background-image: url('img/ice-cream-2.png');
+}
+
+.bg-3 { 
+	background-color: #a7948d;
+	background-image: url('img/ice-cream-3.png');
 }
 
 a {
@@ -523,21 +543,8 @@ label {
 	outline: none;
 }
 
-.main-slider__indicator:focus,
 .active-slide {
 	background: #fff;
-}
-
-.bg-1 {
-	background: #8ba596 url('img/ice-cream-1.png') no-repeat 50% 0;
-}
-
-.bg-2 {
-	background: #94a2b2 url('img/ice-cream-2.png') no-repeat 50% 0;
-}
-
-.bg-3 {
-	background: #a7948d url('img/ice-cream-3.png') no-repeat 50% 0;
 }
 
 .hidden {
