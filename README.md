@@ -1,1 +1,1 @@
-# Верстка Gllacy
+Gllacy training layout
