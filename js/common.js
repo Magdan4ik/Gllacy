@@ -40,10 +40,44 @@ $(document).ready(function(){
   pic = new Image();
   pic2 = new Image();
   pic3 = new Image();
-    pic.src="/img/ice-cream-1.png";
-    pic2.src="/img/ice-cream-2.png";
-    pic3.src="/img/ice-cream-3.png";
+  pic.src="/img/ice-cream-1.png";
+  pic2.src="/img/ice-cream-2.png";
+  pic3.src="/img/ice-cream-3.png";
+
 });
+
+
+//Mmenu
+ jQuery(document).ready(function( $ ) {
+    var $menu = $("#my-menu").mmenu({
+      extensions: ['fx-menu-zoom'],
+      navbar: { title: '<img src="img/Gllacy-logo.png">' },
+      offCanvas: {"position": "left"},
+      searchfield: {"resultsPanel": true, "showSubPanels": false, "placeholder": "Поиск", "noResults": "Ничего не найдено" },
+      navbars: [ {"position": "bottom", "content": [ "searchfield" ]} ]
+    }, {
+      clone: true
+    });
+
+    var $icon = $("#my-icon");
+    var API = $menu.data( "mmenu" );
+
+    $icon.on( "click", function() {
+       API.open();
+    });
+
+    API.bind( "open:finish", function() {
+       setTimeout(function() {
+          $icon.addClass( "is-active" );
+       }, 100);
+    });
+    API.bind( "close:finish", function() {
+       setTimeout(function() {
+          $icon.removeClass( "is-active" );
+       }, 100);
+    });
+ });
+
 
 
 // Google MAP
